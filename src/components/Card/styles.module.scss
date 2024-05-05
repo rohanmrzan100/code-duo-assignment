@@ -1,0 +1,92 @@
+.card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .tag-list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    background-color: white;
+    border: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    .tag {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4px;
+      background-color: var(--c-titan-white);
+      color: var(--c-indigo);
+      font-weight: 600;
+      padding: 8px 12px;
+      line-height: 1;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      .icon {
+        color: indigo;
+      }
+    }
+  }
+
+  .title {
+    font-size: 24px;
+    color: var(--c-void);
+    margin: 0;
+  }
+
+  .info {
+    font-size: 14px;
+    flex-grow: 1;
+    color: black;
+  }
+  .bottom {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    border: none;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 12px;
+    padding: 0;
+    gap: 10px;
+    .favourite {
+      color: rgb(0, 0, 0);
+      height: 28px;
+      width: 28px;
+      color: red;
+    }
+    .not-favourite {
+      color: rgb(0, 0, 0);
+      height: 34px;
+      width: 34px;
+      color: red;
+    }
+    .button {
+      font: inherit;
+      line-height: 1;
+      background-color: var(--c-white);
+      border: 2px solid var(--c-indigo);
+      color: var(--c-indigo);
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin: 0;
+      &:hover,
+      &:focus {
+        background-color: var(--c-indigo);
+        color: white;
+      }
+    }
+  }
+}
