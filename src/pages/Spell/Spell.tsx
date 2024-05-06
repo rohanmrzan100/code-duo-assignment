@@ -4,7 +4,6 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { ISpell } from "../../types";
 import Markdown from "react-markdown";
-import { CiFilter } from "react-icons/ci";
 
 const SpellDetails = () => {
   const [loading, setLoading] = useState(false);
@@ -33,7 +32,9 @@ const SpellDetails = () => {
 
     if (index) getSpell(index);
   }, []);
-
+  if (loading) {
+    return <h3>Loading ...</h3>;
+  }
   return (
     <>
       {spell && (
@@ -111,7 +112,7 @@ const SpellDetails = () => {
                   </ul>
                 </li>
               )}
-              {spell.subclasses  && (
+              {spell.subclasses && (
                 <li>
                   <span>Sub Classes : </span>
                   <ul>

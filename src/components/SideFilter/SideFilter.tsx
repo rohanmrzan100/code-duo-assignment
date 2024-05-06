@@ -33,9 +33,13 @@ const SideFilter = ({
   }
 
   useEffect(() => {
-    active
-      ? (document.getElementById("overlay").style.display = "block")
-      : (document.getElementById("overlay").style.display = "none");
+    const overlay = document.getElementById("overlay")
+    if(overlay){
+      active
+      ? overlay.style.display = "block"
+      : overlay.style.display = "none";
+    }
+
   }, [active]);
   return (
     <>
