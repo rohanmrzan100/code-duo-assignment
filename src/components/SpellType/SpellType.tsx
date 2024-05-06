@@ -15,6 +15,7 @@ const SpellType = () => {
     { name: "Evocation", search: "evocation" },
     { name: "Enchantment", search: "enchantment" },
     { name: "Illusion", search: "illusion" },
+    { name: "Transmutation", search: "transmutation" },
   ];
 
   const toggleDropdown = () => {

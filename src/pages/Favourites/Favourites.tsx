@@ -109,7 +109,7 @@ const Favourites = () => {
                 {spell.desc[0].substring(0, 150) + "..."}
               </p>
               <div className={styles["bottom"]}>
-                <Link to={`/spell/${spell.index}`}>
+                <Link to={`/spell/?index=/${spell.index}`}>
                   <button className={styles["button"]}>
                     <span>Learn more</span>
                     <FaArrowRight />

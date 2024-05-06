@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./styles.module.scss";
+import styles from "../SideFilter/styles.module.scss";
 import { CiSearch } from "react-icons/ci";
 import { createSearchParams, useNavigate } from "react-router-dom";
 
@@ -21,6 +21,7 @@ const Search = ({
     navigate({
       search: createSearchParams({}).toString(),
     });
+    
   };
 
   return (

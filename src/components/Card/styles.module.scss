@@ -56,17 +56,20 @@
     margin-top: 12px;
     padding: 0;
     gap: 10px;
+
     .favourite {
       color: rgb(0, 0, 0);
       height: 28px;
       width: 28px;
       color: red;
+      margin-right: 10px;
     }
     .not-favourite {
       color: rgb(0, 0, 0);
-      height: 34px;
-      width: 34px;
+      height: 28px;
+      width: 28px;
       color: red;
+      margin-right: 10px;
     }
     .button {
       font: inherit;

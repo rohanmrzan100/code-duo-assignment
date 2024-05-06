@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Favourites from "./pages/Favourites/Favourites";
 import Home from "./pages/Home/Home";
-import Spell from "./pages/Spell/Spell";
+import SpellDetails from "./pages/Spell/Spell";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <div className="app">
         <ToastContainer
           position="top-right"
-          autoClose={5000}
+          autoClose={2000}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
@@ -25,12 +25,13 @@ function App() {
           pauseOnHover
           theme="light"
         />
+        <div id="overlay"></div>
         <Navbar />
         <div className="main-section">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/my-fav" element={<Favourites />} />
-            <Route path="/spell/:id" element={<Spell />} />
+            <Route path="/spell" element={<SpellDetails />} />
           </Routes>
         </div>
         <Footer />

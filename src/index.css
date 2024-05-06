@@ -13,11 +13,14 @@
   --orange-primary: #c42f2f;
 }
 
+html,
 body {
   min-height: 100vh;
-
+  max-width: 100vw;
+  position: relative;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /*== start of code for tooltips ==*/
@@ -95,4 +98,13 @@ body {
   }
 }
 
-
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 50; /* Ensure it's above other content */
+}

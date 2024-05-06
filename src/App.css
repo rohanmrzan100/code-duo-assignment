@@ -12,5 +12,5 @@
   flex-grow: 1;
   /* padding: 24px; */
   color: white;
-
+  max-width: 100vw;
 }

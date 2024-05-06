@@ -10,6 +10,7 @@ export interface ISpell {
   name: string;
   index: string;
   desc: string[];
+  components: string[];
   range: string;
   duration: string;
   attack_type: string;

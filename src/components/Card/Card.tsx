@@ -57,7 +57,6 @@ const Card = ({ url, index }: ICardProps) => {
     toast.warn(index.toLocaleUpperCase() + " removed from your favourites !");
   }
   useEffect(() => {
-
     const fav = localStorage.getItem("fav");
     if (!fav) {
       return;
@@ -113,7 +112,7 @@ const Card = ({ url, index }: ICardProps) => {
             {spell.desc[0].substring(0, 150) + "..."}
           </p>
           <div className={styles["bottom"]}>
-            <Link to={`/spell/${spell.index}`}>
+            <Link to={`/spell/?index=${spell.index}`}>
               <button className={styles["button"]}>
                 <span>Learn more</span>
                 <FaArrowRight />
@@ -127,6 +126,7 @@ const Card = ({ url, index }: ICardProps) => {
                   ? removeFavourite(spell.index)
                   : addToFavourite(spell.index);
               }}
+  
             >
               {isFavourite ? (
                 <FaHeart className={`${styles["favourite"]} `} />
