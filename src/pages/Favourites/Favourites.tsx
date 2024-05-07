@@ -60,7 +60,6 @@ const Favourites = () => {
   return (
     <div className={styles.favourite}>
       <h2>My Favourites</h2>
-
       {loading ? (
         <h2>Loading ...</h2>
       ) : (
@@ -127,6 +126,7 @@ const Favourites = () => {
           ))}
         </div>
       )}
+      {spells.length < 1 && <h3>You have not added any favourites</h3>}
     </div>
   );
 };

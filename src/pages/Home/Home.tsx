@@ -108,7 +108,9 @@ const Home = () => {
           <SpellType />
           <Search handleQueryValue={handleDataFromChild} />
           <br />
-          <button onClick={() => (window.location.href = "/")}>Clear Filter</button>
+          <button onClick={() => (window.location.href = "/")}>
+            Clear Filter
+          </button>
         </div>
       </div>
       <div className={styles.right}>
