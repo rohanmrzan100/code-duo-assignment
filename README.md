@@ -16,3 +16,4 @@ Then run :
 yarn run dev
     
 ```
+You can get live preview here :- https://dungeons-and-dragons-spells-rohanmaharjan.netlify.app/
