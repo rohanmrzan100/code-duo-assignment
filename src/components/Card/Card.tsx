@@ -65,7 +65,7 @@ const Card = ({ url, index }: ICardProps) => {
     if (favArray.includes(index)) {
       setIsFavourite(true);
     }
-  }, []);
+  }, [index]);
   return (
     <>
       {spell && (

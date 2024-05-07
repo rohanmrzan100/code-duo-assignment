@@ -45,44 +45,45 @@ const Home = () => {
     }
     fetchSpellFromQuery();
   }, [query]);
-  async function fetchSpells() {
-    setLoading(true);
 
-    const params = new URLSearchParams(location.search);
-    const school = params.get("school");
-    const lvl = params.get("level");
-    let url = "/api/spells";
-    if (school || lvl) {
-      url += "?";
-      if (school) {
-        url += "school=" + school;
+  useEffect(() => {
+    async function fetchSpells() {
+      setLoading(true);
+
+      const params = new URLSearchParams(location.search);
+      const school = params.get("school");
+      const lvl = params.get("level");
+      let url = "/api/spells";
+      if (school || lvl) {
+        url += "?";
+        if (school) {
+          url += "school=" + school;
+          if (lvl) {
+            url += "&";
+          }
+        }
         if (lvl) {
-          url += "&";
+          url += "level=" + lvl;
         }
       }
-      if (lvl) {
-        url += "level=" + lvl;
+
+      try {
+        const response = await axios.get(url);
+        setSpells(response.data.results);
+        setDisplaySpells(response.data.results.slice(0, DEFAULT_PAGE_SIZE));
+      } catch (error) {
+        console.log(error);
+        toast.error("Something went wrong !");
+      } finally {
+        setLoading(false);
       }
     }
-
-    try {
-      const response = await axios.get(url);
-      setSpells(response.data.results);
-      setDisplaySpells(response.data.results.slice(0, DEFAULT_PAGE_SIZE));
-    } catch (error) {
-      console.log(error);
-      toast.error("Something went wrong !");
-    } finally {
-      setLoading(false);
-    }
-  }
-  useEffect(() => {
     fetchSpells();
   }, [location.search]);
 
-  useEffect(() => {
-    fetchSpells();
-  }, []);
+  // useEffect(() => {
+  //   fetchSpells();
+  // }, []);
 
   function handleLoadMore() {
     const nextPage = page + 1;
@@ -104,7 +105,6 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.left}>
-        
         <div className={styles.schools}>
           <SpellLevel />
           <SpellType />

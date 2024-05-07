@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <ToastContainer
-          position="top-right"
+          position="bottom-right"
           autoClose={1000}
           hideProgressBar={false}
           newestOnTop={false}
@@ -22,8 +22,7 @@ function App() {
           rtl={false}
           pauseOnFocusLoss
           draggable
-          pauseOnHover
-          theme="light"
+          theme="dark"
         />
         <div id="overlay"></div>
         <Navbar />
