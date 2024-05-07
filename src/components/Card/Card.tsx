@@ -114,7 +114,7 @@ const Card = ({ url, index }: ICardProps) => {
           <div className={styles["bottom"]}>
             <Link to={`/spell/?index=${spell.index}`}>
               <button className={styles["button"]}>
-                <span>Learn more</span>
+                <p>Learn more</p>
                 <FaArrowRight />
               </button>
             </Link>

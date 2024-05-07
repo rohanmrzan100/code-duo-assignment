@@ -10,7 +10,7 @@
   color: white;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
-
+  box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.8);
   height: 100%;
   .filterTop {
     display: flex;
@@ -32,6 +32,33 @@
 
 .flex {
   display: none;
+
+  .clearFilter {
+    background-color: #ffffff;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222222;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+      "Helvetica Neue", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    outline: none;
+    padding: 8px 12px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+      transform 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+  }
+
   svg {
     height: 34px;
     width: 34px;

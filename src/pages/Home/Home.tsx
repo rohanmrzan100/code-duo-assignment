@@ -9,6 +9,7 @@ import SpellLevel from "../../components/SpellLevel/SpellLevel";
 import SpellType from "../../components/SpellType/SpellType";
 import { ICardProps } from "../../types";
 import styles from "./styles.module.scss";
+import VerticalDivider from "../../components/VerticalDivider";
 axios.defaults.baseURL = "https://www.dnd5eapi.co";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 const DEFAULT_PAGE_SIZE = 12;
@@ -103,16 +104,21 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.left}>
+        
         <div className={styles.schools}>
           <SpellLevel />
           <SpellType />
           <Search handleQueryValue={handleDataFromChild} />
           <br />
-          <button onClick={() => (window.location.href = "/")}>
+          <button
+            className={styles.clearFilter}
+            onClick={() => (window.location.href = "/")}
+          >
             Clear Filter
           </button>
         </div>
       </div>
+      <VerticalDivider />
       <div className={styles.right}>
         <div className={styles.top}>
           <div className={styles.leftSide}>

@@ -108,3 +108,9 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 50; /* Ensure it's above other content */
 }
+
+@media screen and (max-width: 940px) {
+  .divider {
+    display: none;
+  }
+}

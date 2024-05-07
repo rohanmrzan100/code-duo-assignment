@@ -33,13 +33,12 @@ const SideFilter = ({
   }
 
   useEffect(() => {
-    const overlay = document.getElementById("overlay")
-    if(overlay){
+    const overlay = document.getElementById("overlay");
+    if (overlay) {
       active
-      ? overlay.style.display = "block"
-      : overlay.style.display = "none";
+        ? (overlay.style.display = "block")
+        : (overlay.style.display = "none");
     }
-
   }, [active]);
   return (
     <>
@@ -54,7 +53,12 @@ const SideFilter = ({
           {" "}
           <CiFilter />
         </span>
-        <button onClick={() => (window.location.href = "/")}>Clear Filter</button>
+        <button
+          className={styles.clearFilter}
+          onClick={() => (window.location.href = "/")}
+        >
+          Clear Filter
+        </button>
       </div>
       <div className={`${styles.filter} ${!active && styles.active}`}>
         <div className={styles.filterTop}>

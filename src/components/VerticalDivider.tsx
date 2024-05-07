@@ -8,6 +8,7 @@ const VerticalDivider = () => {
         marginTop: "30px",
         
       }}
+      className="divider"
     ></div>
   );
 };
